@@ -1,0 +1,80 @@
+{
+    "gitflow4code.features": [
+        {
+            "name": "feature/catologue",
+            "base": "develop"
+        },
+        {
+            "name": "feature/authentication",
+            "base": "develop"
+        },
+        {
+            "name": "feature/shoppingcart",
+            "base": "develop"
+        },
+        {
+            "name": "feature/admin-auth",
+            "base": "develop"
+        },
+        {
+            "name": "feature/add-product-form",
+            "base": "develop"
+        },
+        {
+            "name": "feature/fixed-options",
+            "base": "develop"
+        },
+        {
+            "name": "feature/cart-fixed-options",
+            "base": "develop"
+        },
+        {
+            "name": "feature/cart-total-price",
+            "base": "develop"
+        },
+        {
+            "name": "feature/remove-from-cart",
+            "base": "develop"
+        },
+        {
+            "name": "feature/user-delivery-address",
+            "base": "develop"
+        },
+        {
+            "name": "feature/multiple-product-pictures",
+            "base": "develop"
+        },
+        {
+            "name": "feature/multiple-product-options",
+            "base": "develop"
+        },
+        {
+            "name": "feature/acceptance-tests",
+            "base": "develop"
+        },
+        {
+            "name": "feature/acceptance-test",
+            "base": "develop"
+        }
+    ],
+    "gitflow4code.releases": [
+        {
+            "name": "release/1.0.0",
+            "base": "develop"
+        },
+        {
+            "name": "release/3",
+            "base": "develop"
+        },
+        {
+            "name": "release/4",
+            "base": "develop"
+        }
+    ],
+    "gitflow4code.hotfixes": [
+        {
+            "name": "hotfix/formFix",
+            "base": "master"
+        }
+    ]
+}

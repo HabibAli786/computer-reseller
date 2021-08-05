@@ -1,0 +1,80 @@
+
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Admin Page</title>
+		<meta name="author" content="Habib Ali">
+		<link href="../bootstrap-4.3.1-dist/css/bootstrap.css" type="text/css" rel="stylesheet" />
+		<link href="style.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="container-fluid p-0">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<a class="navbar-brand">Computer Reseller</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item active">
+							<a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/logout">Logout</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<h1 class="pl-2">Add computer form</h1>
+		<form action="/computer" enctype="multipart/form-data" method="post" class="w-50 pl-3">
+			<div class="form-group">
+				<label>Name</label>
+				<input class="form-control" type="text" name="name" placeholder="computer name" required></p>
+			</div>
+            <div class="form-group">
+				<label>Description</label>
+				<input class="form-control" type="text" name="description" placeholder="computer description" required></p>
+			</div>
+            <div class="form-group">
+				<label>Price (£)</label>
+				<input class="form-control" type="number" min="1" name="price" placeholder="computer price" required></p>
+			</div>
+			<br>
+			<div class="form-group">
+				<label>Option 1</label>
+				<input class="form-control" type="text" name="Op1" placeholder="choose the option 1"></p>
+				<input class="form-control" type="number" min="1" name="Op1Price" placeholder="price for option 1"></p>
+			</div>
+			<div class="form-group">
+				<label>Option 2</label>
+				<input class="form-control" type="text" name="Op2" placeholder="choose the option 2"></p>
+				<input class="form-control" type="number" min="1" name="Op2Price" placeholder="price for option 2"></p>
+			</div>
+			<div class="form-group">
+				<label>Option 3</label>
+				<input class="form-control" type="text" name="Op3" placeholder="choose the option 3"></p>
+				<input class="form-control" type="number" min="1" name="Op3Price" placeholder="price for option 3"></p>
+			</div>
+            <div class="form-group">
+                <label>Upload image 1</label>
+                <input type="file" name="image" class="form-control-file" required>
+            </div>
+			<div class="form-group">
+                <label>Upload image 2</label>
+                <input type="file" name="image2" class="form-control-file">
+            </div>
+			<div class="form-group">
+                <label>Upload image 3</label>
+                <input type="file" name="image3" class="form-control-file">
+            </div>
+			<input class="btn btn-primary mb-5" type="submit" value="Add item">
+		</form>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
+</html>

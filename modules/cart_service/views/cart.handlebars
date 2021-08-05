@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8">
+		<title>My Cart</title>
+		<link href="../bootstrap-4.3.1-dist/css/bootstrap.css" type="text/css" rel="stylesheet" />
+		<link href="../style.css" type="text/css" rel="stylesheet" />
+	</head>
+    <body>
+
+        <div class="container-fluid p-0">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<a class="navbar-brand">Computer Reseller</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item active">
+							<a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/account">Account</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/logout">Log Out</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+
+        <h1>Shopping Cart</h1>
+
+        <div class="container-fluid mt-5">
+			{{#unless items}}
+                <h1>Shopping cart empty...</h1>
+			{{/unless}}
+			{{#each items}}
+            <div class="row mt-3">
+                <div class="col-12">
+					<img src="{{this.path}}.jpeg" class="h-75 w-25 float-left h-50">
+                    <h1>{{this.name}}</h1>
+                    <h3>Total Config Price: £{{this.Total}}</h3>
+					<form action="/item-delete" method="post">
+						<input type="hidden" name="name" value="{{this.name}}">
+						<button type="submit" class="btn btn-danger">Remove item</button>
+					</form>
+                </div>
+            </div>
+			{{/each}}
+        </div>
+
+    </body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,1 @@
+INSERT INTO Products (name, description, Feature1, Feature2, Feature3, price, path, Option1, Option2, Option3, Op1Price, Op2Price, Op3Price) SELECT * FROM (SELECT "HP Pavilion", "DUMMY DATA", "Intel", "8GB", "2Tb SSD", 230, "/random/path/to", "Windows", "SoundCard", "Fan1", 100, 20, 30) AS tmp WHERE NOT EXISTS (SELECT id FROM Products WHERE id = 1);

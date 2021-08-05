@@ -1,0 +1,1 @@
+INSERT INTO Items (name, price, path, Op1Price, Op2Price, Op3Price, Total) SELECT * FROM (SELECT "HP Pavilion", 230, "random/path/for/image", 10, 20, 30, 1000) AS tmp WHERE NOT EXISTS (SELECT id FROM Items WHERE id = 1);
